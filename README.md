@@ -4,7 +4,7 @@
 
 AES-GCM-SIV is an authenticated encryption algorithm designed to provide nonce misuse resistance, and is specified in [RFC 8452](https://www.rfc-editor.org/rfc/rfc8452).
 
-This repository provides C, Android, and Java implementations, and is optimized for high-performance in architectures with cryptographic hardware accelerators.
+This repository provides C, Android, Java, and Go implementations, and is optimized for high-performance in architectures with cryptographic hardware accelerators.
 
 ## Table of Contents
 
@@ -37,6 +37,13 @@ This allows to take advantage of the optimized C code when it is supported by th
 The JNI bindings are in the [`jni`](./jni) repository, and the Java code is located in the [`java`](./java) repository.
 
 Detailed instructions are available in this [`README.md`](./java/README.md).
+
+### Go
+
+The Go implementation is a cgo wrapper over the C implementation in [`lib`](./lib).
+It builds the C sources together with the Go package, without a separate CMake build.
+
+Detailed instructions are available in this [`README.md`](./go/README.md).
 
 ## How to contribute
 
